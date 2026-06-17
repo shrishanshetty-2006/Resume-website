@@ -1,60 +1,115 @@
-/* Animated Gradient Background */
+/* Animatic Flowing Background Styling */
 body {
   margin: 0;
-  padding: 20px;
-  background: linear-gradient(-45deg, #1e1e2f, #2a1b40, #1b3a4b, #112233);
+  padding: 40px 20px;
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #311042, #111827);
   background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  color: #ffffff;
+  animation: gradientMovement 18s ease infinite;
+  color: #f8fafc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: font-family 0.3s ease;
 }
 
-@keyframes gradientAnimation {
+@keyframes gradientMovement {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Profile Image Styling */
+/* Dropdown Menu Toolbar */
+.toolbar {
+  text-align: right;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+.toolbar select {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Glassmorphism Resume Container Card */
+.portfolio-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile Image */
+.profile-header {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
 .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  border: 3px solid #00ffcc;
+  border: 3px solid #6366f1;
   object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
 }
+.profile-header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; color: #fff; }
+.contact-info { margin: 5px 0; color: #94a3b8; }
+.contact-links a { color: #38bdf8; text-decoration: none; }
+.contact-links a:hover { text-decoration: underline; }
 
-/* Typing Test Color States */
-.text-display span {
-  font-size: 24px;
+/* Sections formatting */
+.resume-section { margin-bottom: 35px; }
+.resume-section h2 { border-left: 4px solid #6366f1; padding-left: 12px; font-size: 1.4rem; color: #f1f5f9; margin-bottom: 15px; }
+.resume-item { margin-bottom: 15px; }
+.resume-item h3 { margin: 0 0 5px 0; font-size: 1.15rem; color: #e2e8f0; }
+.meta { margin: 0; font-size: 0.9rem; color: #94a3b8; }
+ul { padding-left: 20px; line-height: 1.6; color: #cbd5e1; }
+li { margin-bottom: 8px; }
+p { line-height: 1.6; color: #cbd5e1; }
+
+/* Typing System Color State Architecture */
+.typing-test-area {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  margin-top: 40px;
+}
+.typing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.text-display {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.25rem;
   letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
-
-.correct {
-  color: #00ff88; /* Bright Green */
-  text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
-}
-
-.incorrect {
-  color: #ff4444; /* Vivid Red */
-  background-color: rgba(255, 68, 68, 0.2);
-  border-radius: 2px;
-}
-
-.untyped {
-  color: #888888; /* Dim Gray */
-}
-
-/* Text Input Box */
+.correct { color: #22c55e; text-shadow: 0 0 8px rgba(34, 197, 94, 0.4); }
+.incorrect { color: #ef4444; background: rgba(239, 68, 68, 0.15); border-radius: 3px; }
+.untyped { color: #64748b; }
 .text-input {
   width: 100%;
-  max-width: 600px;
-  height: 80px;
-  margin-top: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  padding: 10px;
-  font-size: 18px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: none;
 }
+.text-input:focus { outline: none; border-color: #6366f1; }

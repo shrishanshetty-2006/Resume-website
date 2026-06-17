@@ -3,27 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio & Typing Test</title>
+    <title>Shrishan - Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="profile-container" style="text-align: center; margin-top: 20px;">
-        <img src="photo.png" alt="Profile Picture" class="profile-img">
-    </div>
-
-    <div class="toolbar" style="text-align: center; margin: 20px 0;">
-        <label for="fontSelect" style="font-weight: bold;">Choose Font: </label>
-        <select id="fontSelect" style="padding: 5px; border-radius: 5px;">
-            <option value="'Courier New', Courier, monospace">Retro Coding (Monospace)</option>
-            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Modern Clean (Sans-Serif)</option>
-            <option value="'Georgia', serif">Classic Elegant (Serif)</option>
+    <div class="toolbar">
+        <label for="fontSelect">Customize Font: </label>
+        <select id="fontSelect">
+            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Modern Clean</option>
+            <option value="'Courier New', Courier, monospace">Retro Coding</option>
+            <option value="'Georgia', serif">Classic Elegant</option>
         </select>
     </div>
 
-    <div class="typing-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 40px;">
-        <div id="textDisplay" class="text-display" style="margin-bottom: 15px; font-weight: 500;"></div>
-        <textarea id="textInput" class="text-input" placeholder="Start typing here..." autofocus></textarea>
+    <div class="portfolio-container">
+        
+        <header class="profile-header">
+            <img src="photo.png" alt="Shrishan Profile Picture" class="profile-img">
+            <h1>SHRISHAN</h1>
+            <p class="contact-info">Mangalore, India | +91-7411688905</p>
+            <p class="contact-links">
+                <a href="mailto:shrishanshetty@gmail.com">shrishanshetty@gmail.com</a> | 
+                <a href="https://linkedin.com/in/shrishan-shetty" target="_blank">linkedin.com/in/shrishan-shetty</a>
+            </p>
+        </header>
+
+        <section class="resume-section">
+            <h2>Professional Summary</h2>
+            <p>Motivated Cloud Professional and Bachelor of Computer Applications (BCA) graduate with a strong foundational skillset spanning web development, database management, and essential cloud computing concepts. Combines technical proficiency with strong problem-solving skills and a passion for innovation to improve customer service, optimize processes, and contribute to organizational growth. Adaptable and eager to apply these technical fundamentals to an entry-level software development role, technical analyst position, or IT internship.</p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> HTML, CSS, JavaScript (Basic), PHP (Basic), Python (Basic), Java (Basic)</li>
+                <li><strong>Databases:</strong> MySQL</li>
+                <li><strong>Tools & Utilities:</strong> Git & GitHub, Microsoft Office</li>
+                <li><strong>Cloud & Infrastructure:</strong> Cloud Computing Fundamentals (GCP Basics)</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Education</h2>
+            <div class="resume-item">
+                <h3>Bachelor of Computer Applications (BCA) — Score: 75%</h3>
+                <p class="meta">Vivekananda College, Puttur | Graduated: May 2026</p>
+            </div>
+            <div class="resume-item">
+                <h3>P.U.C — Score: 80%</h3>
+                <p class="meta">Vani PU College, Belthangady | Graduated: May 2023</p>
+            </div>
+            <div class="resume-item">
+                <h3>S.S.L.C — Score: 85%</h3>
+                <p class="meta">Nethaji Subhas Chandra Bose GHS, Savanalu | Graduated: May 2021</p>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Academic & Personal Projects</h2>
+            <div class="resume-item">
+                <h3>Lost and Found Management System</h3>
+                <p class="meta">Technologies used: PHP, HTML, CSS, MySQL</p>
+                <ul>
+                    <li>Developed a responsive web-based application designed to manage, track, and recover lost items efficiently within organizations or campuses.</li>
+                    <li>Built interfaces allowing users to securely report missing items, upload found item details, and verify ownership before item restoration.</li>
+                    <li>Structured a backend relational database to manage system profiles, log user queries, and maintain item tracking records.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Certifications & Achievements</h2>
+            <ul>
+                <li><strong>State-Level IT Fest Winner:</strong> Secured 2nd Prize in Wolfpack Showdown Gaming at the State-Level Intercollegiate IT Fest, EKASHUNYAM 3.0.</li>
+                <li><strong>State-Level Sports Achievement:</strong> Participated in the Bunts State-Level Kabaddi Tournament held in Mumbai and secured 2nd Prize.</li>
+            </ul>
+        </section>
+
+        <section class="resume-section typing-test-area">
+            <h2>Interactive Typing Test Feature</h2>
+            <p style="text-align: center; color: #aaa;">Practice your speed directly on my profile website!</p>
+            <div class="typing-section">
+                <div id="textDisplay" class="text-display"></div>
+                <textarea id="textInput" class="text-input" placeholder="Click here and start typing..."></textarea>
+            </div>
+        </section>
+
     </div>
 
     <script src="script.js"></script>

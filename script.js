@@ -2,9 +2,10 @@ const textDisplay = document.getElementById('textDisplay');
 const textInput = document.getElementById('textInput');
 const fontSelect = document.getElementById('fontSelect');
 
-const targetText = "The quick brown fox jumps over the lazy dog.";
+// Dynamic quote engine content loop
+const targetText = "Combines technical proficiency with strong problem-solving skills and a passion for innovation to improve customer service and optimize processes.";
 
-// Load text into spans
+// Initialize the spans
 function initializeTest() {
   textDisplay.innerHTML = '';
   targetText.split('').forEach(char => {
@@ -15,7 +16,7 @@ function initializeTest() {
   });
 }
 
-// Compare Input text for live color updates
+// Color matching evaluation mechanics
 textInput.addEventListener('input', () => {
   const arrayQuote = textDisplay.querySelectorAll('span');
   const arrayValue = textInput.value.split('');
@@ -32,10 +33,10 @@ textInput.addEventListener('input', () => {
   });
 });
 
-// Dynamic Font Changer Switcher
+// Dynamic typography global switch listener
 fontSelect.addEventListener('change', (e) => {
   document.body.style.fontFamily = e.target.value;
 });
 
-// Run on start
+// Run engine initialization
 initializeTest();
