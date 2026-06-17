@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrishan - Professional Portfolio</title>
+    <title>Shrishan - Interactive Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="toolbar">
-        <label for="fontSelect">Customize Font: </label>
-        <select id="fontSelect">
-            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Modern Clean</option>
-            <option value="'Courier New', Courier, monospace">Retro Coding</option>
-            <option value="'Georgia', serif">Classic Elegant</option>
-        </select>
-    </div>
 
     <div class="portfolio-container">
         
         <header class="profile-header">
             <img src="photo.png" alt="Shrishan Profile Picture" class="profile-img">
-            <h1>SHRISHAN</h1>
+            <h1 class="moving-font">SHRISHAN</h1>
             <p class="contact-info">Mangalore, India | +91-7411688905</p>
             <p class="contact-links">
                 <a href="mailto:shrishanshetty@gmail.com">shrishanshetty@gmail.com</a> | 
@@ -45,22 +36,6 @@
         </section>
 
         <section class="resume-section">
-            <h2>Education</h2>
-            <div class="resume-item">
-                <h3>Bachelor of Computer Applications (BCA) — Score: 75%</h3>
-                <p class="meta">Vivekananda College, Puttur | Graduated: May 2026</p>
-            </div>
-            <div class="resume-item">
-                <h3>P.U.C — Score: 80%</h3>
-                <p class="meta">Vani PU College, Belthangady | Graduated: May 2023</p>
-            </div>
-            <div class="resume-item">
-                <h3>S.S.L.C — Score: 85%</h3>
-                <p class="meta">Nethaji Subhas Chandra Bose GHS, Savanalu | Graduated: May 2021</p>
-            </div>
-        </section>
-
-        <section class="resume-section">
             <h2>Academic & Personal Projects</h2>
             <div class="resume-item">
                 <h3>Lost and Found Management System</h3>
@@ -73,20 +48,63 @@
             </div>
         </section>
 
-        <section class="resume-section">
-            <h2>Certifications & Achievements</h2>
+        <section class="resume-section navigation-controls">
+            <h2>Explore More Details</h2>
+            <div class="btn-group">
+                <button class="toggle-btn" onclick="toggleSection('education')">View Education</button>
+                <button class="toggle-btn" onclick="toggleSection('achievements')">View Achievements</button>
+                <button class="toggle-btn" onclick="toggleSection('hobbies')">View Hobbies</button>
+                <button class="toggle-btn" onclick="toggleSection('personal')">View Personal Details</button>
+            </div>
+        </section>
+
+        <div id="education" class="hidden-content fade-in">
+            <h3>Education</h3>
+            <div class="resume-item">
+                <h4>Bachelor of Computer Applications (BCA) — Score: 75%</h4>
+                <p class="meta">Vivekananda College, Puttur | Graduated: May 2026</p>
+            </div>
+            <div class="resume-item" style="margin-top: 10px;">
+                <h4>P.U.C — Score: 80%</h4>
+                <p class="meta">Vani PU College, Belthangady | Graduated: May 2023</p>
+            </div>
+            <div class="resume-item" style="margin-top: 10px;">
+                <h4>S.S.L.C — Score: 85%</h4>
+                <p class="meta">Nethaji Subhas Chandra Bose GHS, Savanalu | Graduated: May 2021</p>
+            </div>
+        </div>
+
+        <div id="achievements" class="hidden-content fade-in">
+            <h3>Certifications & Achievements</h3>
             <ul>
                 <li><strong>State-Level IT Fest Winner:</strong> Secured 2nd Prize in Wolfpack Showdown Gaming at the State-Level Intercollegiate IT Fest, EKASHUNYAM 3.0.</li>
                 <li><strong>State-Level Sports Achievement:</strong> Participated in the Bunts State-Level Kabaddi Tournament held in Mumbai and secured 2nd Prize.</li>
             </ul>
-        </section>
+        </div>
 
+        <div id="hobbies" class="hidden-content fade-in">
+            <h3>Hobbies</h3>
+            <ul>
+                <li>Playing Sports</li>
+                <li>Helping in Family Works</li>
+                <li>Internet Surfing</li>
+            </ul>
+        </div>
+
+        <div id="personal" class="hidden-content fade-in">
+            <h3>Personal Information</h3>
+            <p><strong>Father's Name:</strong> Shrinivasa Shetty</p>
+            <p><strong>Date of Birth:</strong> 31-05-2006</p>
+            <p><strong>Place of Birth:</strong> Dakshina Kannada, Karnataka</p>
+            <p><strong>Marital Status:</strong> Single</p>
+            <p><strong>Languages Known:</strong> Fluency in spoken English, Hindi, Kannada & Tulu</p>
+            <p><strong>Address:</strong> S/O Shrinivasa Shetty, Halasinakatte House, Savanalu Post and Village, Dakshina Kannada, Belthangady Tq-574214</p>
+        </div>
         <section class="resume-section typing-test-area">
-            <h2>Interactive Typing Test Feature</h2>
-            <p style="text-align: center; color: #aaa;">Practice your speed directly on my profile website!</p>
+            <h2 class="moving-font">Interactive Typing Test Feature</h2>
+            <p style="text-align: center; color: #a5b4fc; font-weight: bold; animation: pulse 1.5s infinite;">Click anywhere on the screen and start typing to test your speed!</p>
             <div class="typing-section">
                 <div id="textDisplay" class="text-display"></div>
-                <textarea id="textInput" class="text-input" placeholder="Click here and start typing..."></textarea>
             </div>
         </section>
 
