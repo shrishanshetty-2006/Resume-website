@@ -2,7 +2,7 @@ const textDisplay = document.getElementById('textDisplay');
 const targetText = "Combines technical proficiency with strong problem-solving skills and a passion for innovation to improve customer service and optimize processes.";
 let typedText = "";
 
-// 1. Initialize typing layout spans
+// 1. Initialize typing matrix spans layout
 function initializeTest() {
   textDisplay.innerHTML = '';
   targetText.split('').forEach(char => {
@@ -13,8 +13,13 @@ function initializeTest() {
   });
 }
 
-// 2. Global Event Listener for Background Keyboard Processing
+// 2. Full Viewport Keydown Listener Array Capture Matrix
 window.addEventListener('keydown', (e) => {
+  // Prevent default browser scrolling actions on spacebar keydown execution
+  if (e.key === ' ' && e.target === document.body) {
+    e.preventDefault();
+  }
+
   if (e.key.length > 1 && e.key !== 'Backspace') return;
 
   const arrayQuote = textDisplay.querySelectorAll('span');
@@ -39,23 +44,31 @@ window.addEventListener('keydown', (e) => {
   });
 });
 
-// 3. Section Toggle Controller Logic (Includes Education Tracking)
+// 4. Dynamic Component Layer State Panel Toggle Controller
 function toggleSection(sectionId) {
   const sections = ['education', 'achievements', 'hobbies', 'personal'];
+  const targetElement = document.getElementById(sectionId);
   
-  sections.forEach(id => {
+  // Find all buttons to track state parameters
+  const buttons = document.querySelectorAll('.toggle-btn');
+  
+  sections.forEach((id, index) => {
     const el = document.getElementById(id);
     if (id === sectionId) {
       if (el.style.display === 'block') {
         el.style.display = 'none';
+        buttons[index].classList.remove('active-panel');
       } else {
         el.style.display = 'block';
+        buttons[index].classList.add('active-panel');
       }
     } else {
-      document.getElementById(id).style.display = 'none';
+      el.style.display = 'none';
+      const fallbackBtn = document.querySelector(`button[onclick="toggleSection('${id}')"]`);
+      if(fallbackBtn) fallbackBtn.classList.remove('active-panel');
     }
   });
 }
 
-// Run engine initialization
+// Run real-time initialization loop sequence hooks
 initializeTest();

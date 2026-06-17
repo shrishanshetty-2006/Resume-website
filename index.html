@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrishan - Interactive Portfolio</title>
+    <title>Shrishan — Premium Interactive Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
     <div class="portfolio-container">
         
         <header class="profile-header">
-            <img src="photo.png" alt="Shrishan Profile Picture" class="profile-img">
+            <div class="avatar-wrapper">
+                <img src="photo.png" alt="Shrishan Profile Picture" class="profile-img">
+                <div class="pulse-ring"></div>
+            </div>
             <h1 class="moving-font">SHRISHAN</h1>
             <p class="contact-info">Mangalore, India | +91-7411688905</p>
             <p class="contact-links">
-                <a href="mailto:shrishanshetty@gmail.com">shrishanshetty@gmail.com</a> | 
-                <a href="https://linkedin.com/in/shrishan-shetty" target="_blank">linkedin.com/in/shrishan-shetty</a>
+                <a href="mailto:shrishanshetty@gmail.com" class="hover-link">shrishanshetty@gmail.com</a>
+                <span class="divider">|</span>
+                <a href="https://linkedin.com/in/shrishan-shetty" target="_blank" class="hover-link">linkedin.com/in/shrishan-shetty</a>
             </p>
         </header>
 
-        <section class="resume-section">
+        <section class="resume-section card-reveal">
             <h2>Professional Summary</h2>
             <p>Motivated Cloud Professional and Bachelor of Computer Applications (BCA) graduate with a strong foundational skillset spanning web development, database management, and essential cloud computing concepts. Combines technical proficiency with strong problem-solving skills and a passion for innovation to improve customer service, optimize processes, and contribute to organizational growth. Adaptable and eager to apply these technical fundamentals to an entry-level software development role, technical analyst position, or IT internship.</p>
         </section>
 
-        <section class="resume-section">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Languages:</strong> HTML, CSS, JavaScript (Basic), PHP (Basic), Python (Basic), Java (Basic)</li>
-                <li><strong>Databases:</strong> MySQL</li>
-                <li><strong>Tools & Utilities:</strong> Git & GitHub, Microsoft Office</li>
-                <li><strong>Cloud & Infrastructure:</strong> Cloud Computing Fundamentals (GCP Basics)</li>
-            </ul>
+        <section class="resume-section card-reveal">
+            <h2>Technical Skills Matrix</h2>
+            <div class="skills-grid">
+                <div class="skill-pill"><strong>Languages:</strong> HTML, CSS, JavaScript, PHP, Python, Java</div>
+                <div class="skill-pill"><strong>Databases:</strong> MySQL relational engines</div>
+                <div class="skill-pill"><strong>Tools & Utilities:</strong> Git & GitHub infrastructure, Microsoft Office</div>
+                <div class="skill-pill"><strong>Cloud Engineering:</strong> Cloud Computing Fundamentals (GCP Basics)</div>
+            </div>
         </section>
 
-        <section class="resume-section">
-            <h2>Academic & Personal Projects</h2>
-            <div class="resume-item">
+        <section class="resume-section card-reveal">
+            <h2>Featured Production Projects</h2>
+            <div class="project-card">
                 <h3>Lost and Found Management System</h3>
-                <p class="meta">Technologies used: PHP, HTML, CSS, MySQL</p>
+                <p class="meta-tag">Stack Architecture: PHP, HTML, CSS, MySQL</p>
                 <ul>
                     <li>Developed a responsive web-based application designed to manage, track, and recover lost items efficiently within organizations or campuses.</li>
                     <li>Built interfaces allowing users to securely report missing items, upload found item details, and verify ownership before item restoration.</li>
@@ -48,61 +56,66 @@
             </div>
         </section>
 
-        <section class="resume-section navigation-controls">
-            <h2>Explore More Details</h2>
+        <section class="resume-section navigation-controls card-reveal">
+            <h2>Explore Modular Records</h2>
             <div class="btn-group">
-                <button class="toggle-btn" onclick="toggleSection('education')">View Education</button>
-                <button class="toggle-btn" onclick="toggleSection('achievements')">View Achievements</button>
-                <button class="toggle-btn" onclick="toggleSection('hobbies')">View Hobbies</button>
-                <button class="toggle-btn" onclick="toggleSection('personal')">View Personal Details</button>
+                <button class="toggle-btn" onclick="toggleSection('education')"><span>View Education</span></button>
+                <button class="toggle-btn" onclick="toggleSection('achievements')"><span>View Achievements</span></button>
+                <button class="toggle-btn" onclick="toggleSection('hobbies')"><span>View Hobbies</span></button>
+                <button class="toggle-btn" onclick="toggleSection('personal')"><span>View Personal Info</span></button>
             </div>
         </section>
 
-        <div id="education" class="hidden-content fade-in">
-            <h3>Education</h3>
-            <div class="resume-item">
-                <h4>Bachelor of Computer Applications (BCA) — Score: 75%</h4>
-                <p class="meta">Vivekananda College, Puttur | Graduated: May 2026</p>
+        <div id="displayDeck" class="deck-wrapper">
+            <div id="education" class="hidden-content page-transition">
+                <h3>Academic Qualifications</h3>
+                <div class="timeline-item">
+                    <h4>Bachelor of Computer Applications (BCA) — 75%</h4>
+                    <p class="meta">Vivekananda College, Puttur | May 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Pre-University Course (P.U.C) — 80%</h4>
+                    <p class="meta">Vani PU College, Belthangady | May 2023</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>S.S.L.C — 85%</h4>
+                    <p class="meta">Nethaji Subhas Chandra Bose GHS, Savanalu | May 2021</p>
+                </div>
             </div>
-            <div class="resume-item" style="margin-top: 10px;">
-                <h4>P.U.C — Score: 80%</h4>
-                <p class="meta">Vani PU College, Belthangady | Graduated: May 2023</p>
+
+            <div id="achievements" class="hidden-content page-transition">
+                <h3>Certifications & Milestones</h3>
+                <ul class="premium-list">
+                    <li><strong>State-Level IT Fest Winner:</strong> Secured 2nd Prize in Wolfpack Showdown Gaming at the State-Level Intercollegiate IT Fest, EKASHUNYAM 3.0.</li>
+                    <li><strong>State-Level Sports Achievement:</strong> Participated in the Bunts State-Level Kabaddi Tournament held in Mumbai and secured 2nd Prize.</li>
+                </ul>
             </div>
-            <div class="resume-item" style="margin-top: 10px;">
-                <h4>S.S.L.C — Score: 85%</h4>
-                <p class="meta">Nethaji Subhas Chandra Bose GHS, Savanalu | Graduated: May 2021</p>
+
+            <div id="hobbies" class="hidden-content page-transition">
+                <h3>Personal Interests & Hobbies</h3>
+                <ul class="premium-list">
+                    <li>Competitive Sports & Athletics Deployment</li>
+                    <li>Supporting Local Community & Family Work Operations</li>
+                    <li>Internet Infrastructure Exploration & Technological Surfing</li>
+                </ul>
+            </div>
+
+            <div id="personal" class="hidden-content page-transition">
+                <h3>Detailed Dossier Registry</h3>
+                <div class="info-table">
+                    <p><strong>Father's Name:</strong> Shrinivasa Shetty</p>
+                    <p><strong>Date of Birth:</strong> 31-05-2006</p>
+                    <p><strong>Place of Birth:</strong> Dakshina Kannada, Karnataka</p>
+                    <p><strong>Marital Status:</strong> Single</p>
+                    <p><strong>Languages:</strong> Spoken & Written Fluency in English, Hindi, Kannada & Tulu</p>
+                    <p><strong>Address:</strong> Halasinakatte House, Savanalu Post, Belthangady Tq, Dakshina Kannada - 574214</p>
+                </div>
             </div>
         </div>
 
-        <div id="achievements" class="hidden-content fade-in">
-            <h3>Certifications & Achievements</h3>
-            <ul>
-                <li><strong>State-Level IT Fest Winner:</strong> Secured 2nd Prize in Wolfpack Showdown Gaming at the State-Level Intercollegiate IT Fest, EKASHUNYAM 3.0.</li>
-                <li><strong>State-Level Sports Achievement:</strong> Participated in the Bunts State-Level Kabaddi Tournament held in Mumbai and secured 2nd Prize.</li>
-            </ul>
-        </div>
-
-        <div id="hobbies" class="hidden-content fade-in">
-            <h3>Hobbies</h3>
-            <ul>
-                <li>Playing Sports</li>
-                <li>Helping in Family Works</li>
-                <li>Internet Surfing</li>
-            </ul>
-        </div>
-
-        <div id="personal" class="hidden-content fade-in">
-            <h3>Personal Information</h3>
-            <p><strong>Father's Name:</strong> Shrinivasa Shetty</p>
-            <p><strong>Date of Birth:</strong> 31-05-2006</p>
-            <p><strong>Place of Birth:</strong> Dakshina Kannada, Karnataka</p>
-            <p><strong>Marital Status:</strong> Single</p>
-            <p><strong>Languages Known:</strong> Fluency in spoken English, Hindi, Kannada & Tulu</p>
-            <p><strong>Address:</strong> S/O Shrinivasa Shetty, Halasinakatte House, Savanalu Post and Village, Dakshina Kannada, Belthangady Tq-574214</p>
-        </div>
-        <section class="resume-section typing-test-area">
+        <section class="resume-section typing-test-area card-reveal">
             <h2 class="moving-font">Interactive Typing Test Feature</h2>
-            <p style="text-align: center; color: #a5b4fc; font-weight: bold; animation: pulse 1.5s infinite;">Click anywhere on the screen and start typing to test your speed!</p>
+            <p class="pulse-text">Click anywhere on the screen and begin typing to activate real-time precision metrics.</p>
             <div class="typing-section">
                 <div id="textDisplay" class="text-display"></div>
             </div>
