@@ -1,197 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shrishan Shetty | Portfolio</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#f4f7fc;
-    color:#333;
-}
-
-header{
-    background:linear-gradient(135deg,#0077ff,#00c6ff);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-header h1{
-    font-size:40px;
-}
-
-header p{
-    margin-top:10px;
-    font-size:18px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:white;
-    color:#0077ff;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-}
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:40px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-    color:#0077ff;
-}
-
-.about{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
-
-.skill-card{
-    background:white;
-    padding:20px;
-    text-align:center;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-.project-card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio & Typing Test</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Shrishan Shetty</h1>
-    <p>BCA Graduate | Cloud & IT Enthusiast</p>
-
-    <a class="btn" href="SHRISHAN RESUME.pdf" download>
-        Download Resume
-    </a>
-</header>
-
-<div class="container">
-
-    <h2 class="section-title">About Me</h2>
-    <div class="about">
-        <p>
-            Motivated BCA graduate with knowledge of Web Development,
-            Cloud Computing Fundamentals, Databases, and Software Development.
-            Passionate about learning new technologies and building practical IT solutions.
-        </p>
+    <div class="profile-container" style="text-align: center; margin-top: 20px;">
+        <img src="photo.png" alt="Profile Picture" class="profile-img">
     </div>
 
-</div>
-
-<div class="container">
-
-    <h2 class="section-title">Technical Skills</h2>
-
-    <div class="skills">
-
-        <div class="skill-card">
-            <h3>HTML & CSS</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>Python</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>Java</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>PHP</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>MySQL</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>Git & GitHub</h3>
-        </div>
-
-        <div class="skill-card">
-            <h3>GCP Basics</h3>
-        </div>
-
+    <div class="toolbar" style="text-align: center; margin: 20px 0;">
+        <label for="fontSelect" style="font-weight: bold;">Choose Font: </label>
+        <select id="fontSelect" style="padding: 5px; border-radius: 5px;">
+            <option value="'Courier New', Courier, monospace">Retro Coding (Monospace)</option>
+            <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Modern Clean (Sans-Serif)</option>
+            <option value="'Georgia', serif">Classic Elegant (Serif)</option>
+        </select>
     </div>
 
-</div>
-
-<div class="container">
-
-    <h2 class="section-title">Projects</h2>
-
-    <div class="project-card">
-        <h3>Lost and Found Management System</h3>
-
-        <p>
-            Developed a web-based application using PHP, HTML, CSS and MySQL
-            to manage, track and recover lost items efficiently.
-        </p>
+    <div class="typing-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 40px;">
+        <div id="textDisplay" class="text-display" style="margin-bottom: 15px; font-weight: 500;"></div>
+        <textarea id="textInput" class="text-input" placeholder="Start typing here..." autofocus></textarea>
     </div>
 
-</div>
-
-<div class="container">
-
-    <h2 class="section-title">Contact</h2>
-
-    <div class="about">
-        <p><strong>Email:</strong> shrishanshetty@gmail.com</p>
-        <p><strong>Phone:</strong> +91 7411688905</p>
-        <p><strong>Location:</strong> Mangalore, Karnataka, India</p>
-    </div>
-
-</div>
-
-<footer>
-    <p>© 2026 Shrishan Shetty | Portfolio Website</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
